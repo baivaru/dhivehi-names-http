@@ -15,7 +15,7 @@ async def home():
         'description': 'Dhivehi Names API',
         'version': '0.0.1',
         'project': 'https://github.com/baivaru/dhivehi-names-http',
-        'docs': 'https://dhinames.baivaru.net/docs',
+        'docs': 'https://dhinames.baiva.ru/docs',
         'available_endpoints': [
             '/random',
             '/random/{count}',

@@ -8,7 +8,7 @@ app = FastAPI(
 )
 db = BaivaruNames()
 
-@app.get('/')
+@app.get('/', tags=["names"])
 async def home():
     return {
         'app': 'BaivaruNames',
@@ -25,25 +25,25 @@ async def home():
     }
 
 
-@app.get("/random")
+@app.get("/random", tags=["names"])
 async def random():
     name = db.get_random()
     
     return name
 
-@app.get("/random/{count}")
+@app.get("/random/{count}", tags=["names"])
 async def randoms(count: int):
     names = db.get_randoms(count)
     
     return names
 
-@app.get("/search/{query}")
+@app.get("/search/{query}", tags=["names"])
 async def search(query: str):
     names = db.search(query)
 
     return names
 
-@app.get("/exact/{query}")
+@app.get("/exact/{query}", tags=["names"])
 async def exact(query: str):
     name = db.exact(query)
 

@@ -1,0 +1,9 @@
+.env
+*.session
+.env.sample
+*.ini
+*.log*
+venv*
+.idea
+*.pyc
+env.py
